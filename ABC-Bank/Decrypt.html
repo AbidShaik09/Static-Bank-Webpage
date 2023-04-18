@@ -30,14 +30,14 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link "  href="Services.html">Services</a>
+                <a class="nav-link active"  href="Services.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="Growth.html">Accounts</a>
+                <a class="nav-link" href="Growth.html">Accounts</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link active" href="Payment.html">Payment</a>
+                <a class="nav-link" href="Payment.html">Payment</a>
               </li>
               
               <li class="nav-item">
@@ -58,29 +58,50 @@
     
 </header>
 
-<body><div class="d-flex align-items-center justify-content-center pb-4">
-   
-  <form>
-    
-
-    <div class="form-outline mb-4">
-      <input type="text" id="AccNumber" class="form-control"
-        placeholder="Account Number" />
+<body>
+    <div class="d-flex align-items-center justify-content-center pb-4"> 
+        <h3>Decrypt</h3>
     </div>
+  <div class="container p-3">
+    <p>Enter Hashvalue:</p>
+    <br>
+    <textarea class="textarea text-secondary" style="width: 60%;"></textarea>
+    <hr>
+    <button id="encryptBtn" class="btn btn-outline-primary" style="width: 150px;">Decrypt</button>
+    <br>
+    <br>
 
-    
-    <div class="form-outline mb-4">
-    <input type="number" id="Amt" class="form-control" placeholder="Amount" />
-         </div>
-    
+    <div id="myDiv" class="hidden">
+        <h5>Transaction ID : </h5>
+        <hr>
+        <p>
+            1002045970
+        </p>
+      </div>
 
-    <div class="text pt-1 mb-5 pb-1" >
-      <a href="Tid.html"><button type="button" class="btn btn-outline-primary ">Transfer</button></a>
-      
-    </div>
+</div>
 
-    
 
-  </form>
-</div> 
+<!-- Include the JavaScript code inline -->
+<script>
+    // Get the div and button elements
+    var myDiv = document.getElementById('myDiv');
+    var encryptBtn = document.getElementById('encryptBtn');
+
+    // Hide the div on page load (alternatively, you can use CSS to set display:none initially)
+    // myDiv.style.display = 'none';
+
+    // Add a click event listener to the button
+    encryptBtn.addEventListener('click', function() {
+      // Toggle the display property on the div, which will hide it if it's visible and show it if it's hidden
+      if (myDiv.style.display === 'none') {
+        myDiv.style.display = 'block';
+      } else {
+        myDiv.style.display = 'none';
+      }
+    });
+  </script>
+  
+
+
 </body>

@@ -30,10 +30,10 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link "  href="Services.html">Services</a>
+                <a class="nav-link"  href="Services.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="Growth.html">Accounts</a>
+                <a class="nav-link" href="Growth.html">Accounts</a>
               </li>
               
               <li class="nav-item">
@@ -58,80 +58,85 @@
     
 </header>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transaction Details</title>
+  <!-- Include any necessary CSS files here -->
+</head>
 <body>
   <div class="container p-3">
-    <h3>Accounts</h3>
+    <a href="Bank.html"><button class="btn btn-primary">Logout</button></a>
   </div>
-  <br>
-  <div class="container align-items-center justify-content-center d-flex">
+  <div class="d-flex align-items-center justify-content-center pb-4">
+    <div class="text-primary">
+        <h5>Transaction Details</h5>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="container">
     <table class="table table-bordered tabletable-striped align-items-center justify-content-center" style="border: 5px;" >
         <thead>
             <tr>
                 <th class="text-primary">
-                    Name
+                    Transaction Id
                 </th>
                 <th class="text-primary">
-                    Email
+                    Amount
                 </th>
-                <th class="text-primary">
-                    Account Number                    
-                </th>
-                
-                <th class="text-primary">
-                  Balance
-                </th>
-              
-                <th class="text-primary">
-                  Address
-                </th>
-                 
-                
-                <th class="text-primary">
-                  Mobile
-                </th>
-                <th class="text-primary">
-                  DOB
-                </th>
-                <th class="text-primary">
-                  Adhaar
-                </th>
-                <th class="text-primary">
-                  PAN
+                <th>
+                    
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td >
-                    <p class="text-secondary">Ravi</p>
+                <td width="50%">
+                    <p class="text-secondary">1002045970</p>
                 </td>
                 <td>
-                    <p class="text-secondary">ravivanam@gmail.com</p>
+                    <p class="text-secondary">2000</p>
                 </td>
                 <td>
-                    1094396394
-                </td>
-                <td>
-                  40000
-                </td>
-                <td>
-                  VR Nagar
-                </td>
-                <td>
-                  9862849650
-                </td>
-                <td>
-                  2002-09-09
-                </td>
-                <td>
-                  764568765435
-                </td>
-                <td>
-                  NDSWY8237J
+                    <button class="btn btn-primary" id="encryptBtn">Encrypt</button>
                 </td>
             </tr>
         </tbody>
     </table>
     <br>
+    <div id="myDiv"  class="hidden">
+        <label for="Hash" class="control-label text-primary">Hash Value:</label>
+        <br>
+        <div class="container-fluid">
+            <textarea id="Hash" style="width:60%; height: 1cm;">PLiJYP8Mm1YQC8LfmeG2Lw==</textarea>
+            <br>
+            <div class="text-secondary">
+                <p>To Decrypt, Go to <a href="Decrypt.html">Services/Decrypt</a></p>
+            </div>
+        </div>
+    </div>
   </div>
+
+  <!-- Include the JavaScript code inline -->
+  <script>
+    // Get the div and button elements
+    var myDiv = document.getElementById('myDiv');
+    var encryptBtn = document.getElementById('encryptBtn');
+
+    // Hide the div on page load (alternatively, you can use CSS to set display:none initially)
+    // myDiv.style.display = 'none';
+
+    // Add a click event listener to the button
+    encryptBtn.addEventListener('click', function() {
+      // Toggle the display property on the div, which will hide it if it's visible and show it if it's hidden
+      if (myDiv.style.display === 'none') {
+        myDiv.style.display = 'block';
+      } else {
+        myDiv.style.display = 'none';
+      }
+    });
+  </script>
 </body>
+</html>
